@@ -1,5 +1,5 @@
 // VARIABLES 
-$fuenteppal: 'Roboto', sans-serif;
+$fuentemain: 'Roboto', sans-serif;
 $blanco: #FFFFFF;
 $verde: #58806C;
 $Rosa: #F8B0C6;
@@ -26,14 +26,14 @@ body {
     font-size: 16px;
     /* 1 rem = 10px */
     background: $blanco;
-    font-family: $fuenteppal;
+    font-family: $fuentemain;
 
 
     a:visited {
         color: $Oscuro;
     }
 
-
+}
     // HEADER
     /*vamos a usar un header "wrapped", para esto vamos a cambiar el w: a 100%, y reemplazar left y top, por Padding*/
     .header {
@@ -75,9 +75,9 @@ body {
                 font-weight: bold;
                 margin-left: 13.5rem;
                 margin-right: 43rem;
+                font-size: 3.5rem;
                 width: 29rem;
                 height: 1.9rem;
-                color: #3D3D3D;
                 gap: 2.5rem;
                 text-justify: left;
                 list-style: none;
@@ -91,7 +91,7 @@ body {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            font-size: 1.6rem;
+            font-size: 2rem;
             text-justify: center;
             padding: 8px 16px;
             gap: 1rem;
@@ -130,4 +130,3 @@ body {
 
         }
     }
-}
