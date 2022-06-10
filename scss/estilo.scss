@@ -34,36 +34,52 @@ body {
     }
 
 }
-    // HEADER
-    /*vamos a usar un header "wrapped", para esto vamos a cambiar el w: a 100%, y reemplazar left y top, por Padding*/
-    .header {
-        position: absolute;
-        width: 100%;
-        height: 38px;
-        padding-left: 2.9rem;
-        padding-top: 4.2rem;
 
-        @media screen and (max-width: $breaktablet) {
-            background-color: black;
+// HEADER
+.header {
+    position: absolute;
+    width: 100%;
+    padding-left: 2.9rem;
+    padding-right: 2.9rem;
+    padding-top: 4.2rem;
+
+    @media screen and (max-width: $breaktablet) {
+        background-color: $Rosa;
+    }
+
+    @media screen and (max-width: $breakmobile) {
+        background-color: yellow;
+    }
+
+
+    .header_contenedor {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &-logo {
+            flex-grow: 1;
+
+            
+            @media screen and (max-width: $breaktablet) {
+                flex-grow: 90;
+            }
         }
+        &-nav {
+            flex-grow:2;
 
-        @media screen and (max-width: $breakmobile) {
-            background-color: yellow;
-        }
+            svg {
+                flex-grow: 1;
+                display: none;
+                width: 40px;
+                margin-right: 2.4rem;
 
-
-        .header_contenedor {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        /*vamos a meter &*/
-        /*vamos a pasar la eleccion de la fuente al body por ahora*/
-        .header_contenedor-nav {
+                @media screen and (max-width: $breaktablet) {
+                    display: block;
+                    color: #3D3D3D;
+                }
+            }
 
             ul {
                 display: flex;
@@ -73,60 +89,65 @@ body {
                 align-items: center;
                 font-style: normal;
                 font-weight: bold;
-                margin-left: 13.5rem;
-                margin-right: 43rem;
                 font-size: 3.5rem;
                 width: 29rem;
                 height: 1.9rem;
                 gap: 2.5rem;
                 text-justify: left;
                 list-style: none;
+
+                @media screen and (max-width: $breaktablet) {
+                    display: none;
+                }
             }
         }
 
-        .header_contenedor-register {
-            width: 18.1rem;
+    }
+
+
+    .btn {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        gap: 1rem;
+
+        @media screen and (max-width: $breaktablet) {
+            display: none;
+        }
+
+        &-signin {
+            cursor: pointer;
+            width: 8.3rem;
             height: 3.5rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            text-justify: center;
-            padding: 8px 16px;
-            gap: 1rem;
+            color: $verde;
+            background-color: $blanco;
+            border: 2px solid $verde;
+            border-radius: 5px;
 
-            .register_button-signin {
-                cursor: pointer;
-                width: 8.3rem;
-                height: 3.5rem;
-                color: $verde;
-                background-color: $blanco;
-                border: 2px solid $verde;
-                border-radius: 5px;
-
-                &:hover {
-                    color: $blanco;
-                    background-color: $verde;
-                }
-            }
-
-            /*sintetizamos aca, vamos a usar los botones de otra forma*/
-            .register_button-signup {
-                cursor: pointer;
-                width: 8.3rem;
-                height: 3.5rem;
+            &:hover {
                 color: $blanco;
                 background-color: $verde;
-                border: 2px solid $verde;
-                border-radius: 5px;
+            }
+        }
 
-                &:hover {
-                    color: $verde;
-                    background-color: $Rosa;
-                }
+        &-signup {
+            cursor: pointer;
+            width: 8.3rem;
+            height: 3.5rem;
+            color: $blanco;
+            background-color: $verde;
+            border: 2px solid $verde;
+            border-radius: 5px;
 
+            &:hover {
+                color: $verde;
+                background-color: $Rosa;
             }
 
         }
+
     }
+}
