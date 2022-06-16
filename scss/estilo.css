@@ -15,6 +15,7 @@ body {
   /* 1 rem = 10px */
   background: #FFFFFF;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 body a:visited {
@@ -40,7 +41,7 @@ body a:visited {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding-left: 2rem;
+  padding-left: 2.8rem;
 }
 
 .header_contenedor-nav {
@@ -50,7 +51,7 @@ body a:visited {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   gap: 2rem;
 }
@@ -71,7 +72,7 @@ body a:visited {
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
-  padding-right: 2rem;
+  padding-right: 2.8rem;
 }
 
 .header_contenedor-btn .signin {
@@ -86,6 +87,11 @@ body a:visited {
   border-radius: 5px;
 }
 
+.header_contenedor-btn .signin:hover {
+  color: #FFFFFF;
+  background-color: #58806C;
+}
+
 .header_contenedor-btn .signup {
   cursor: pointer;
   font-size: 1.2rem;
@@ -96,6 +102,11 @@ body a:visited {
   background-color: #58806C;
   border: 2px solid #58806C;
   border-radius: 5px;
+}
+
+.header_contenedor-btn .signup:hover {
+  color: #58806C;
+  background-color: #FFFFFF;
 }
 
 .header_contenedor-btn .close {
@@ -138,7 +149,7 @@ main {
   width: 95rem;
   height: 23rem;
   position: absolute;
-  top: 55rem;
+  top: 58rem;
   left: 15rem;
 }
 
@@ -155,7 +166,7 @@ main {
   font-weight: bold;
   padding-top: 1.3rem;
   text-align: center;
-  background: #58806C;
+  background: #3C614F;
   color: #FFFFFF;
   height: 10rem;
 }
@@ -204,7 +215,7 @@ main {
   justify-self: end;
   border-radius: 15px;
   border: none;
-  background-color: #58806C;
+  background-color: #3C614F;
   color: #FFFFFF;
   width: 7rem;
   height: 7rem;
@@ -215,7 +226,7 @@ main {
 }
 
 .tab-content form button:hover {
-  background-color: #3C614F;
+  background-color: #58806C;
   transition: .3s;
 }
 
@@ -301,6 +312,10 @@ main {
     border: 2px solid #FFFFFF;
     border-radius: 5px;
   }
+  .header_contenedor-btn .signin:hover {
+    color: #58806C;
+    background-color: #FFFFFF;
+  }
   .header_contenedor-btn .signup {
     cursor: pointer;
     font-size: 1.2rem;
@@ -311,6 +326,10 @@ main {
     background-color: #F8B0C6;
     border: 2px solid #F8B0C6;
     border-radius: 5px;
+  }
+  .header_contenedor-btn .signup:hover {
+    color: #F8B0C6;
+    background-color: #FFFFFF;
   }
   .header_contenedor-btn .close {
     display: block;
@@ -497,6 +516,10 @@ main {
     border: 2px solid #FFFFFF;
     border-radius: 5px;
   }
+  .header_contenedor-btn .signin:hover {
+    color: #58806C;
+    background-color: #FFFFFF;
+  }
   .header_contenedor-btn .signup {
     cursor: pointer;
     font-size: 1.2rem;
@@ -507,6 +530,10 @@ main {
     background-color: #F8B0C6;
     border: 2px solid #F8B0C6;
     border-radius: 5px;
+  }
+  .header_contenedor-btn .signup:hover {
+    color: #F8B0C6;
+    background-color: #FFFFFF;
   }
   .header_contenedor-btn .close {
     width: 3.5rem;
@@ -550,7 +577,6 @@ main {
   .content {
     width: 32rem;
     height: 42rem;
-    position: absolute;
     top: 66rem;
     left: 5rem;
     padding-bottom: 5rem;
@@ -566,7 +592,7 @@ main {
     font-weight: bold;
     padding-top: 1.3rem;
     text-align: center;
-    background: #58806C;
+    background: #3C614F;
     color: #FFFFFF;
     height: 10rem;
   }
@@ -611,12 +637,13 @@ main {
     margin-top: 2rem;
     width: 7.5rem;
     height: 7.5rem;
+    background-color: #3C614F;
   }
   .tab-content form button i {
     font-size: 2.5rem;
   }
   .tab-content form button:hover {
-    background-color: #3C614F;
+    background-color: #58806C;
     transition: .3s;
   }
   .tab-content form h4 {
