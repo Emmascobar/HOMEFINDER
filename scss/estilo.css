@@ -1,3 +1,4 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +53,14 @@ body a:visited {
   font-size: 2rem;
   font-weight: bold;
   gap: 2rem;
+}
+
+.header_contenedor-devices {
+  grid-row: 1/2;
+  grid-column: 2/5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header_contenedor-btn {
@@ -125,6 +134,102 @@ main {
   margin-top: 2rem;
 }
 
+.content {
+  width: 95rem;
+  height: 23rem;
+  position: absolute;
+  top: 55rem;
+  left: 15rem;
+}
+
+.content .nav-pills {
+  width: 40rem;
+}
+
+.content .nav-item {
+  width: 30%;
+}
+
+.content .nav-pills .nav-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-top: 1.3rem;
+  text-align: center;
+  background: #58806C;
+  color: #FFFFFF;
+  height: 10rem;
+}
+
+.content .nav-pills .nav-link.active {
+  background: #FFFFFF;
+  color: #3D3D3D;
+}
+
+.content #buy {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 0px;
+}
+
+.content #sell {
+  border-radius: 0px;
+  border-right: 2px solid #F8B0C6;
+  border-left: 2px solid #F8B0C6;
+}
+
+.content #rent {
+  border-top-right-radius: 16px;
+  border-top-left-radius: 0px;
+}
+
+.tab-content {
+  position: absolute;
+  width: 95.8rem;
+  margin-top: -5rem;
+  background: #FFFFFF;
+  color: #3D3D3D;
+  border-radius: 16px;
+  border-top-left-radius: 0px;
+  z-index: 1000;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+
+.tab-content form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+}
+
+.tab-content form button {
+  justify-self: end;
+  border-radius: 15px;
+  border: none;
+  background-color: #58806C;
+  color: #FFFFFF;
+  width: 7rem;
+  height: 7rem;
+}
+
+.tab-content form button i {
+  font-size: 2.5rem;
+}
+
+.tab-content form button:hover {
+  background-color: #3C614F;
+  transition: .3s;
+}
+
+.tab-content form h4 {
+  font-size: 24px;
+}
+
+.tab-content form select {
+  border: none;
+  background-color: #fff;
+  color: #DBDBDB;
+  font-size: 16px;
+}
+
 @media screen and (max-width: 748px) {
   .header_contenedor {
     grid-template-columns: repeat(4, 1fr);
@@ -150,6 +255,14 @@ main {
     justify-content: flex-start;
     align-items: center;
     padding: 2.4rem;
+  }
+  .header_contenedor-devices {
+    background-color: #58806C;
+    grid-row: 2/3;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-between;
+    display: none;
   }
   .header_contenedor-nav {
     padding: 2.4rem;
@@ -204,9 +317,9 @@ main {
     width: 3.5rem;
   }
   .main_hero {
-    height: 916px;
+    height: 86rem;
     background-image: url(../Resources/herotablet.svg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -227,6 +340,87 @@ main {
     color: #FFFFFF;
     font-size: 1.6rem;
     line-height: 3rem;
+  }
+  .content {
+    width: 65rem;
+    height: 23rem;
+    position: absolute;
+    top: 87rem;
+    left: 5rem;
+    padding-bottom: 5rem;
+  }
+  .content .nav-pills {
+    width: 40rem;
+  }
+  .content .nav-item {
+    width: 30%;
+  }
+  .content .nav-pills .nav-link {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-top: 1.3rem;
+    text-align: center;
+    background: #58806C;
+    color: #FFFFFF;
+    height: 10rem;
+  }
+  .content .nav-pills .nav-link.active {
+    background: #FFFFFF;
+    color: #3D3D3D;
+  }
+  .content #buy {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 0px;
+  }
+  .content #sell {
+    border-radius: 0px;
+    border-right: 2px solid #F8B0C6;
+    border-left: 2px solid #F8B0C6;
+  }
+  .content #rent {
+    border-top-right-radius: 16px;
+    border-top-left-radius: 0px;
+  }
+  .tab-content {
+    position: absolute;
+    width: 65rem;
+    margin-top: -5rem;
+    background: #FFFFFF;
+    color: #3D3D3D;
+    border-radius: 16px;
+    border-top-left-radius: 0px;
+    z-index: 1000;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+  }
+  .tab-content form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+  .tab-content form button {
+    border-radius: 15px;
+    border: none;
+    background-color: #58806C;
+    color: #FFFFFF;
+    width: 7rem;
+    height: 7rem;
+  }
+  .tab-content form button i {
+    font-size: 2.5rem;
+  }
+  .tab-content form button:hover {
+    background-color: #3C614F;
+    transition: .3s;
+  }
+  .tab-content form h4 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .tab-content form select {
+    border: none;
+    background-color: #FFFFFF;
+    color: #DBDBDB;
+    font-size: 16px;
   }
 }
 
@@ -255,6 +449,15 @@ main {
     justify-content: flex-start;
     align-items: center;
     padding: 2.4rem;
+  }
+  .header_contenedor-devices {
+    background-color: #58806C;
+    grid-row: 2/3;
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
   }
   .header_contenedor-nav {
     padding: 2rem;
@@ -312,12 +515,16 @@ main {
     right: 2rem;
     top: 15.7rem;
   }
+  main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .main_hero {
     height: 451px;
     position: absolute;
-    top: 30rem;
+    top: 35rem;
     background-image: url(../Resources/heromobile.svg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -326,18 +533,101 @@ main {
     flex-direction: column;
     gap: 1.5rem;
     position: absolute;
-    top: 1rem;
+    top: -23rem;
     left: 2rem;
   }
   .main_hero--textos h1 {
     color: #3D3D3D;
     font-size: 4rem;
+    position: relative;
+    top: 2rem;
   }
   .main_hero--textos h2 {
-    align-self: flex-start;
     color: #3D3D3D;
     font-size: 1.6rem;
     line-height: 3rem;
+  }
+  .content {
+    width: 32rem;
+    height: 42rem;
+    position: absolute;
+    top: 66rem;
+    left: 5rem;
+    padding-bottom: 5rem;
+  }
+  .content .nav-pills {
+    width: 40rem;
+  }
+  .content .nav-item {
+    width: 30%;
+  }
+  .content .nav-pills .nav-link {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-top: 1.3rem;
+    text-align: center;
+    background: #58806C;
+    color: #FFFFFF;
+    height: 10rem;
+  }
+  .content .nav-pills .nav-link.active {
+    background: #FFFFFF;
+    color: #3D3D3D;
+  }
+  .content #buy {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 0px;
+  }
+  .content #sell {
+    border-radius: 0px;
+    border-right: 2px solid #F8B0C6;
+    border-left: 2px solid #F8B0C6;
+  }
+  .content #rent {
+    border-top-right-radius: 16px;
+    border-top-left-radius: 0px;
+  }
+  .tab-content {
+    position: absolute;
+    width: 42rem;
+    height: 40rem;
+    margin-top: -5rem;
+    background: #FFFFFF;
+    color: #3D3D3D;
+    border-radius: 16px;
+    border-top-left-radius: 0px;
+    z-index: 1000;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+  }
+  .tab-content form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 80px);
+    gap: 0.5rem;
+  }
+  .tab-content form button {
+    justify-self: start;
+    margin-top: 2rem;
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .tab-content form button i {
+    font-size: 2.5rem;
+  }
+  .tab-content form button:hover {
+    background-color: #3C614F;
+    transition: .3s;
+  }
+  .tab-content form h4 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .tab-content form select {
+    border: none;
+    background-color: #FFFFFF;
+    color: #DBDBDB;
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

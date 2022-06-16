@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3e7445d335.js" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
     <link rel="stylesheet" href="./scss/estilo.css">
     <title> Homefinder</title>
 </head>
@@ -39,25 +43,28 @@
                 <input type="checkbox" id="menu">
             </div>
 
-            <div class="header_contenedor-nav">
-                <a class="nav_item" href="">Home</a>
-                <a class="nav_item" href="">Buy</a>
-                <a class="nav_item" href="">Sell</a>
-                <a class="nav_item" href="">Listed</a>
-                <a class="nav_item" href="">Review</a>
-            </div>
-
-            <div class="header_contenedor-btn">
-                <button class="signin">Sign In</button>
-                <button class="signup">Sign Up</button>
-                <div class="close">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" fill="#FFFFFF" viewBox="0 0 24 24"
-                        stroke="#FFFFFF" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+            <div class="header_contenedor-devices">
+                <div class="header_contenedor-nav">
+                    <a class="nav_item" href="">Home</a>
+                    <a class="nav_item" href="">Buy</a>
+                    <a class="nav_item" href="">Sell</a>
+                    <a class="nav_item" href="">Listed</a>
+                    <a class="nav_item" href="">Review</a>
                 </div>
-
+    
+                <div class="header_contenedor-btn">
+                    <button class="signin">Sign In</button>
+                    <button class="signup">Sign Up</button>
+                    <div class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" fill="#FFFFFF" viewBox="0 0 24 24"
+                            stroke="#FFFFFF" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+    
+                </div>
             </div>
+
 
         </div>
 
@@ -72,15 +79,145 @@
             </div>
         </div>
     </main>
-    <footer>
-  
+
+    <footer class="footer">
+
+        <div class="content">
+
+            <!-- Tab: Pestañas -->
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" id="buy" href="#buy">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" id="sell" href="#sell">Sell</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" id="rent" href="#rent">Rent</a>
+                </li>
+            </ul>
+
+            <!-- Tab: Paneles -->
+            <div class="tab-content">
+
+                <!-- BUY RESPONSE -->
+
+                <div id="buy" class="container tab-pane active" style="padding-left: 0px;padding-right: 0px;">
+                    <form class="form">
+                        <div class="custom">
+                            <h4>Location</h4>
+                            <select>
+                                <option value="1">New York</option>
+                                <option value="2">Los Angeles</option>
+                                <option value="3">Washington DC</option>
+                                <option value="4">Miami</option>
+
+                            </select>
+                        </div>
+                        <div class="custom">
+                            <h4>Property tipe</h4>
+                            <select>
+                                <option value="1">Duplex</option>
+                                <option value="2">House</option>
+                                <option value="3">Building floor</option>
+                                <option value="4">Office</option>
+
+                            </select>
+                        </div>
+                        <div class="custom">
+                            <h4>Max Price</h4>
+                            <select>
+                                    <option value="1">$5.000</option>
+                                <option value="2">$10.000</option>
+                                <option value="3">$20.000</option>
+                                <option value="4">$30.000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="boton">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- SELL RESPONSE -->
+
+                <div id="sell" class="container tab-pane fade">
+                    <form>
+                        <div class="custom-select" style="width:200px;">
+                            <select>
+                                <option value="0">Location:</option>
+                                <option value="1">New York</option>
+                                <option value="2">Los Angeles</option>
+                                <option value="3">Washington DC</option>
+                                <option value="4">Miami</option>
+
+                            </select>
+                        </div>
+                        <div class="custom-select" style="width:200px;">
+                            <select>
+                                <option value="0">Property tipe:</option>
+                                <option value="1">Duplex</option>
+                                <option value="2">House</option>
+                                <option value="3">Building floor</option>
+                                <option value="4">Office</option>
+
+                            </select>
+                        </div>
+                        <div class="custom-select" style="width:200px;">
+                            <select>
+                                <option value="0">Max Price:</option>
+                                <option value="1">$5.000</option>
+                                <option value="2">$10.000</option>
+                                <option value="3">$20.000</option>
+                                <option value="4">$30.000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search (lupa)</button>
+                    </form>
+                </div>
+
+                <!-- RENT RESPONSE -->
+
+                <div id="rent" class="container tab-pane fade">
+                    <form>
+                        <div class="custom-select" style="width:200px;">
+                            <select>
+                                <option value="0">Location:</option>
+                                <option value="1">New York</option>
+                                <option value="2">Los Angeles</option>
+                                <option value="3">Washington DC</option>
+                                <option value="4">Miami</option>
+
+                            </select>
+                        </div>
+                        <div class="custom-select" style="width:200px;">
+                            <select>
+                                <option value="0">Property tipe:</option>
+                                <option value="1">Duplex</option>
+                                <option value="2">House</option>
+                                <option value="3">Building floor</option>
+                                <option value="4">Office</option>
+
+                            </select>
+                        </div>
+                        <div class="custom-select" style="width:200px;">
+                            <select>
+                                <option value="0">Max Price:</option>
+                                <option value="1">$300</option>
+                                <option value="2">$900</option>
+                                <option value="3">$1.500</option>
+                                <option value="4">$2.000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search (lupa)</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </footer>
 
     <script src="./main.js"></script>
-
-    <footer>
-
-    </footer>
 
 </body>
 
