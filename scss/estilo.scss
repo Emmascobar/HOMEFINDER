@@ -173,13 +173,19 @@ main {
 // Footer
 
 .content {
-    width: 95rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    position: relative;
+    top: -16rem;
     height: 23rem;
-    position: absolute;
-    top: 58rem;
-    left: 15rem;
 
     .nav-pills {
+        position: relative;
+        top: 5rem;
+        grid-column: 2/3;
+        grid-row: 1/2;
         width: 40rem;
     }
 
@@ -192,7 +198,7 @@ main {
         font-weight: bold;
         padding-top: 1.3rem;
         text-align: center;
-        background: $verdeoscuro;
+        background: $verde;
         color: $blanco;
         height: 10rem;
     }
@@ -220,9 +226,8 @@ main {
 }
 
 .tab-content {
-    position: absolute;
-    width: 95.8rem;
-    margin-top: -5rem;
+    grid-column: 2/6;
+    grid-row: 2/3;
     background: $blanco;
     color: $Oscuro;
     border-radius: 16px;
@@ -240,7 +245,7 @@ main {
             justify-self: end;
             border-radius: 15px;
             border: none;
-            background-color: $verdeoscuro;
+            background-color: $verde;
             color: $blanco;
             width: 7rem;
             height: 7rem;
@@ -251,7 +256,7 @@ main {
             }
 
             &:hover {
-                background-color: $verde;
+                background-color: $verdeoscuro;
                 transition: .3s;
             }
         }
@@ -269,8 +274,6 @@ main {
     }
 
 }
-
-
 
 // Breakpoints
 
@@ -413,14 +416,19 @@ main {
     }
 
     .content {
-        width: 65rem;
-        height: 23rem;
-        position: absolute;
-        top: 87rem;
-        left: 5rem;
-        padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        position: relative;
+        top: -16rem;
+        margin-bottom: 0rem;
 
         .nav-pills {
+            position: relative;
+            top: 5rem;
+            grid-column: 2/3;
+            grid-row: 1/2;
             width: 40rem;
         }
 
@@ -461,9 +469,8 @@ main {
     }
 
     .tab-content {
-        position: absolute;
-        width: 65rem;
-        margin-top: -5rem;
+        grid-column: 2/6;
+        grid-row: 2/3;
         background: $blanco;
         color: $Oscuro;
         border-radius: 16px;
@@ -474,9 +481,11 @@ main {
 
         form {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            align-items: center;
 
             button {
+                justify-self: end;
                 border-radius: 15px;
                 border: none;
                 background-color: $verde;
@@ -496,20 +505,18 @@ main {
             }
 
             h4 {
-                font-size: 2rem;
-                font-weight: bold;
+                font-size: 24px;
             }
 
             select {
                 border: none;
-                background-color: $blanco;
+                background-color: #fff;
                 color: #DBDBDB;
                 font-size: 16px;
             }
         }
 
     }
-
 }
 
 @media screen and (max-width: $breakmobile) {
@@ -666,14 +673,21 @@ main {
     }
 
     .content {
-        width: 32rem;
-        height: 42rem;
-        top: 66rem;
-        left: 5rem;
-        padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        position: relative;
+        top: 52rem;
+        margin-bottom: 80rem;
+        margin-left: 1rem;
 
         .nav-pills {
-            width: 40rem;
+            position: relative;
+            top: 5rem;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            width: 30rem;
         }
 
         .nav-item {
@@ -685,7 +699,7 @@ main {
             font-weight: bold;
             padding-top: 1.3rem;
             text-align: center;
-            background: $verdeoscuro;
+            background: $verde;
             color: $blanco;
             height: 10rem;
         }
@@ -713,10 +727,8 @@ main {
     }
 
     .tab-content {
-        position: absolute;
-        width: 42rem;
-        height: 40rem;
-        margin-top: -5rem;
+        grid-column: 2/3;
+        grid-row: 2/3;
         background: $blanco;
         color: $Oscuro;
         border-radius: 16px;
@@ -726,17 +738,16 @@ main {
         padding: 3rem;
 
         form {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, 80px);
-            gap: 0.5rem;
+            display: block;
 
             button {
-                justify-self: start;
-                margin-top: 2rem;
-                width: 7.5rem;
-                height: 7.5rem;
-                background-color: $verdeoscuro;
+                margin-top: 3rem;
+                border-radius: 15px;
+                border: none;
+                background-color: $verde;
+                color: $blanco;
+                width: 7rem;
+                height: 7rem;
 
                 i {
                     font-size: 2.5rem;
@@ -744,21 +755,22 @@ main {
                 }
 
                 &:hover {
-                    background-color: $verde;
+                    background-color: $verdeoscuro;
                     transition: .3s;
                 }
             }
 
             h4 {
-                font-size: 2rem;
-                font-weight: bold;
+                font-size: 24px;
+                padding: 1rem;
             }
 
             select {
                 border: none;
-                background-color: $blanco;
+                background-color: #fff;
                 color: #DBDBDB;
                 font-size: 16px;
+                padding-left: 0.8rem;
             }
         }
 
